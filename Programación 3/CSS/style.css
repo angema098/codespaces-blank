@@ -286,3 +286,89 @@ input:focus, select:focus {
     color: var(--gray);
 }
 
+/*Eventos de zona interactiva*/
+.hint {
+    display:inline-block;
+    background: #fff3cd;
+    color: #856404;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
+/*Contador*/
+.counter-display {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-align: center;
+    padding: 1rem;
+    font-family: 'Consolas', 'Monaco', monospace;
+}
+/*Listas Dinámicas*/
+.dynamic-list {
+    list-style: none;
+    padding: 0;
+}
+
+.dynamic-list li {
+    background: #eef2f7;
+    padding: 8px 12px;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dynamic-list li button {
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    background: var(--warning);
+}
+
+/*Salidas visuales de consola*/
+.console-output {
+    background: #0d1117;
+    color: #c9d1d9;
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.85rem;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #30363d;
+}
+
+.console-output .line {
+    padding: 2px 0;
+    border-bottom: 1px solid #21262d;
+}
+
+.console-output .line.log {color: #c9d1d9;}
+.console-output .linel.warn {color: #f0ad4e}
+.console-output .line.error {color: #ff6b6b;}
+.console-output .line.info {color: #58a6ff;}
+
+/*Footer*/
+footer.site-footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    margin-top: 2rem;
+}
+
+footer.site-footer p {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+/*Responsive Design*/
+@media (max-width: 768px) {
+    header.site-header h1 {font-size: 1.8rem;}
+    nav.main-nav ul {flex-direction: column; align-items: center;}
+    .counter-display {font-size: 2rem;}
+}
