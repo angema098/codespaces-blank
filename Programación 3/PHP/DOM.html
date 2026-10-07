@@ -176,7 +176,141 @@ titulo.classList<span class="fn">remove</span>(<span class="str">"destacado"</sp
                     <div class="subsection">
                         <h3>3.1 ¿Qué es un evento?</h3>
                         <p>Un <strong>evento</strong> es una acción que ocuerre dentro del navegador: un click, una techa, un envio de formulario, un scroll, etc. los <em>Listeners</em> son funciones que reaccionan a esos eventos.</p>
-                        
+                        <pre><code>elemeto.<span class="fn">addEventListener</span>(<span class="str">click</span>, () =>{
+console.<span class="fn">log</span>(<span class="str">¡Hiciste click!</span>);
+                        });</code></pre>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>3.2 Eventos más usados</h3>
+                        <div class="demo-grid">
+                            <div class="event-card">
+                                <h4>Click</h4>
+                                <p>Click del usuario sobre un elemento.</p>
+                            </div>
+                            <div class="event-card">
+                                <h4>Input</h4>
+                                <p>Se dispara cada vez que el usuario le escribe.</p>
+                            </div>
+                            <div class="event-card">
+                                <h4>Change</h4>
+                                <p>Cuando el valor de un campo cambia y pierde foco.</p>
+                            </div>
+                            <div class="event-card">
+                                <h4>Submit</h4>
+                                <p>Envio de un formulario.</p>
+                            </div>
+                            <div class="event-card">
+                                <h4>Keydown/ keyup</h4>
+                                <p>Cuando se presiona o suelta una tecla.</p>
+                            </div>
+                            <div class="event-card">
+                                <h4>Mouseover / Mouseout</h4>
+                                <p>Cuando el cursor entra o sale de un elemento.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>3.3 Demo: Contador con Click</h3>
+                        <div class="demo-box">
+                            <p class="hint">Haz click en los botones para modificar el contador.</p>
+                            <div class="counter-display" id="contador">0</div>
+                            <div style="text-align: center;">
+                                <button id="btnMas" class="success">+1</button>
+                                <button id="btnMenos" class="warning">-1</button>
+                                <button id="btnReset" class="outline">Reset</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>3.4 Demo: Entrada de texto en vivo</h3>
+                        <div class="demo-box">
+                            <p class="hint">Escribe en el campo y observa el resultado en tiempo real.</p>
+                            <input type="text" id="inputNombre" placeholder="Escribe tu nombre...">
+                            <div class="output" id="salidaNombre">Aquí verás lo que escribas...</div>
+                        </div>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>3.5 Demo: Lista dinámica (agregar / eliminar)</h3>
+                        <div class="demo-box">
+                            <div style="display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 10px;">
+                                <input type="text" id="inputTarea" placeholder="Nueva Tarea...">
+                                <button id="btnAgregar">Agregar</button>
+                            </div>
+                            <ul class="dynamic-list" id="listaTareas">
+                                <!--Los <li> se generarán dinámicamente-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Sección 4: Consola del navegador-->
+            <section class="card" id="consola">
+                <header>
+                    <h2>4. La consola del Navegador</h2>
+                </header>
+                <div class="content">
+                    <div class="subsection">
+                        <h3>4.1 ¿Por qué usar la consola?</h3>
+                        <p>Es el <strong>Laboratorio</strong> del desarrollador: te permite probar código sin afectar el sitio, inspeccionar variables y detectar errores.</p>
+                        <p>Abre la consola con: </p>
+                        <ul>
+                            <li><strong>F12</strong>o <strong>Ctrl + Shift + I </strong> (Windows/Linux)</li>
+                            <li><strong>Cmd + Option + I</strong>(Mac)</li>
+                            <li>Click Derecho => <em>inspeccionar</em> => pestaña <em>Console</em></li>
+                        </ul>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>Métodos principales de <code>console</code></h3>
+                        <pre><code>console.<span class="fn">log</span>(<span class="str">"Mensaje Normal"</span>);
+console.<span class="fn">warn</span>(<span class="str">"Advertencia"</span>);
+console.<span class="fn">error</span>(<span class="str">"Error Critico"</span>);
+console.<span class="fn">info</span>(<span class="str">"Información"</span>);  
+
+<span class="cmt">//Mostrar objetos como tabla</span>
+console.<span class="fn">table</span>([{nombre: <span class="str">"Wanda"</span>, nota: <span class="num">4.5</span>},
+{nombre: <span class="str">"Cosmo"</span>, nota: <span class="num">3.8</span>}]);
+
+<span class="cmt">//Medir Tiempo</span>
+console.<span class="fn">time</span>(<span class="str">bucle</span>);
+<span class="kw">for</span>(<span class="kw">let</span> i = <span class="num">0</span>; i &lt; <span class="num">1000</span>; i++) {}
+console.<span class="fn">timeEnd</span>(<span class="str">Bucle</span>);
+                        </code></pre>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Demo: Enviar Mensaje a la Consola</h4>
+                        <p class="hint">Presiona un botón y luego abre F12 para ver el resultado.</p>
+                        <button onclick="console.log('Mensaje Normal desde el botón.');">log</button>
+                        <button onclick="console.warn('Advertencia: Revisa tu código.');" class="warning">warn</button>
+                        <button onclick="console.error('Error simulado');">error</button>
+                        <button onclick="console.info('Información Adicional');" class="outline">info</button>
+                        <button onclick="console.table([{nombre: 'Wanda', nota:4.5}, {nombre: 'Cosmo', nota: 3.8}, {nombre: 'Timmy', nota: 5.0}])" class="success">table</button>
+
+                        <!--Espejo Visual de la consola-->
+                        <h4 style="margin-top: 1rem;">Espejo Visual (para referencia)</h4>
+                        <div class="console-output" id="consolaEspejo">
+                            <div class="line-log">Los mensajes enviados aparecerán aquí también...</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--Introducción a Jquery-->
+            <section class="card" id="jquery">
+                <header>
+                    <h2>5. Introducción a Jquery</h2>
+                </header>
+                <div class="content">
+                    <div class="subsection">
+                        <h3>5.1 ¿Qué es Jquery?</h3>
+                        <p>Jquery es una <strong>libreria de JavaScript</strong> creada con el fin de simplificar la manipulación del DOM (Document Object Model), el manejo de eventos y las peticiones AJAX. Aunque hoy existen alternativas modernas (React o VueJS), entender JQuery sigue siendo útil por su presencia en proyectos.</p>
+                        <p>Su lema: <em>"Write less, do more"</em>(Escribe menos, haz más).</p>
                     </div>
                 </div>
             </section>
