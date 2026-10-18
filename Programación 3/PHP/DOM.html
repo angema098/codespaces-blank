@@ -312,37 +312,93 @@ console.<span class="fn">timeEnd</span>(<span class="str">Bucle</span>);
                         <p>Jquery es una <strong>libreria de JavaScript</strong> creada con el fin de simplificar la manipulación del DOM (Document Object Model), el manejo de eventos y las peticiones AJAX. Aunque hoy existen alternativas modernas (React o VueJS), entender JQuery sigue siendo útil por su presencia en proyectos.</p>
                         <p>Su lema: <em>"Write less, do more"</em>(Escribe menos, haz más).</p>
                     </div>
+
+                    <div class="subsection">
+                        <h3>5.2 JavaScript vs JQuery: Comparacion</h3>
+
+                        <p><strong>Seleccionar un elemento por id:</strong></p>
+                        <pre><code><span class="cmt">//JavaScript puro</span>
+<span class="kw">const</span> el = document.<span class="fn">getElementById</span>
+
+<span class="cmt">//JQuery</span>
+<span class="kw">const</span> el = $(<span class="str">"#miId"</span>);
+</code></pre>
+
+                        <p><strong>Añadir un evento click:</strong></p>
+                        <pre><code><span class="cmt">//JavaScript puto</span>
+document.<span class="fn">getElementById</span>(<span class="str">btn</span>).<span class="fn">addEventListener</span>(<span class="str">"clicl"</span>, () => {
+    <span class="fn">alert</span>(<span class="str">Hola</span>);
+});
+
+<span class="cmt">//JQuery</span>
+$(<span class="str">"#btn"</span>).<span class="fn">on</span>(<span class="str">"clck"</span>, () => {
+    <span class="fn">alert</span>(<span class="str">Hola</span>);
+});
+                        </code></pre>
+                        <p><strong>Cambiar el texto de varios elementos:</strong></p>
+                        <pre><code><span class="cmt">//JavaScript puro</span>
+document.<span class="fn">querySelectorAll</span>(<span class="str">".item"</span>).<span class="fn">forEach</span>(el => el.textContent = <span class="str">X</span>);
+
+<span class="cmt">//JQuery</span>
+$(<span class="str">".item"</span>). <span class="fn">text</span>(<span class="str">"X"</span>);
+                        </code></pre>
+                    </div>
+
+                    <div class="demo-box">
+                        <h4>Demo: mismo efecto con JS puro v JQuery</h4>
+                        <p class="hint">Ambos botones producen el mismo resultado. Pero con sintaxis diferentes  </p>
+                        <div style="display: flex; gap: 10px; flex-wrap: wrap ; margin-bottom: 10 px;">
+                            <button id="btnJs">Con JS puro</button>
+                            <button id="btnJQ" class="success">Con JQuery</button>
+                            <button id="btnResetJQ" class="outline">Reset</button>
+                        </div>
+                        <p id="cajaDemoJQ" style="padding: 15px; background: #eef2f7; border-radius: 6px; text-align: center; font-weight: bold;">
+                            Haz click en un boton...
+                        </p>
+                    </div>
                 </div>
             </section>
+
+            <!--Retos de practica-->
             <section class="card" id="retos">
                 <header>
-                    <h2>Retos de Práctica</h2>
+                    <h2>Retos de practica</h2>
                 </header>
                 <div class="content">
                     <div class="subsection">
-                        <h3>Reto 1 — Termómetro</h3>
-                        <p>Crea un input donde el usuario ingrese una temperatura en °C y muestre si es "frío" (&lt; 10), "templado" (10-25) o "caluroso" (&gt; 25).</p>
+                        <h3>Reto 1 - Termometro</h3>
+                        <p>Crea un input donde el usuario ingrese una temperatura en Cº y muestre si es "frio" (&lt; 10), "templado" (10-25) o "caluroso" (&gt; 25).</p>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>Reto 2 - Lista de Compras</h3>
+                        <p>Modificar el demo de "Lista dinamica" para que cada tarea tenga un boton que la marque como completada (tachado el texto).</p>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>Reto 3 - Conversor de Moneda</h3>
+                        <p>Pide un valor en pesos colombianos y muestralo convertido a dolares y euros usando tasas fictisias.</p>
+                    </div>
+
+                    <div class="subsection">
+                        <h3>Reto 4 - Calculadora con event Listeners</h3>
+                        <p>Crea una mini calculadora con bonotes para +, - , *, / y dos campos de entrada.</p>
                     </div>
                     <div class="subsection">
-                        <h3>Reto 2 — Lista de Compras</h3>
-                        <p>Modifica el demo de "Lista dinámica" para que cada tarea tenga un botón que la marque como completada (tachando el texto).</p>
-                    </div>
-                    <div class="subsection">
-                        <h3>Reto 3 — Conversor de Moneda</h3>
-                        <p>Pide un valor en pesos colombianos y muéstralo convertido a dólares y euros usando tasas ficticias.</p>
-                    </div>
-                    <div class="subsection">
-                        <h3>Reto 4 — Calculadora con Event Listeners</h3>
-                        <p>Crea una mini calculadora con botones para +, -, *, / y dos campos de entrada.</p>
-                    </div>
-                    <div class="subsection">
-                        <h3>Reto 5 — Portafolio con JQuery</h3>
+                        <h3>Reto 5 - Portafolio con Jquery</h3>
                         <p>Rehacer uno de los retos anteriores usando JQuery en lugar de JavaScript puro.</p>
                     </div>
                 </div>
             </section>
         </main>
+
+        <!--Footer <footers-->
+
+        <footer class="site-footer">
+            <p>Guia de comando en JavaScript y JQuery.</p>
+            <p>Diseñada con el fin de dar compresion a las tematicas mas relevantes en el uso de JavaScript puro y Jquery.</p>
+        </footer>
+        <script src="javascript/script_2.js"></script>
     </div>
-    <script src="javascript/script.js"></script>
 </body>
 </html>
