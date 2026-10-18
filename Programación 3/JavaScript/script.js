@@ -144,9 +144,9 @@ function agregarLineaEspejo(tipo, mensaje) {
 }
 
 console.log     =(...args) => {_log(...args);        agregarLineaEspejo("log",   args.join(""));};
-console.warn    =(...args) => {_log(...args);        agregarLineaEspejo("warn",   args.join(""));};
-console.error   =(...args) => {_log(...args);        agregarLineaEspejo("error",   args.join(""));};
-console.info    =(...args) => {_log(...args);        agregarLineaEspejo("info",   args.join(""));};
+console.warn    =(...args) => {_warn(...args);        agregarLineaEspejo("warn",   args.join(""));};
+console.error   =(...args) => {_error(...args);        agregarLineaEspejo("error",   args.join(""));};
+console.info    =(...args) => {_info(...args);        agregarLineaEspejo("info",   args.join(""));};
 console.table   =(data) => {
     _table(data)
     agregarLineaEspejo("log", "Tabla mostrada en consola real (F12)")
