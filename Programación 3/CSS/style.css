@@ -190,7 +190,7 @@ code {
 }
 
 /*Botones*/
-button .btn {
+button {
     background: var(--primary);
     color: white;
     border: none;
