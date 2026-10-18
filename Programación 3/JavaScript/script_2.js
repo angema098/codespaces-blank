@@ -33,7 +33,7 @@ btnPromedio.addEventListener("click", () => {
 const textoDemo = document.getElementById("textoDemo");
 
 function cambiarTexto(){
-    textoDemo.textContent = "!El texto Cambio dinamicamente!";
+    textoDemo.textContent = "!El texto cambió dinámicamente!";
 }
 
 function cambiarColor(){
