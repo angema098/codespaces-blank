@@ -47,7 +47,7 @@ function cambiarEstilos(){
 }
 
 function resetearDemo(){
-    textoDemo.textContent = "Este tecto cambiará segun el boton que presiones";
+    textoDemo.textContent = "Este texto cambiará segun el boton que presiones";
     textoDemo.style.color = "";
     textoDemo.style.background = "#eef2f7";
     textoDemo.classList.remove("destacado");
