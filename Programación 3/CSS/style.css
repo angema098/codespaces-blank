@@ -347,7 +347,7 @@ input:focus, select:focus {
 }
 
 .console-output .line.log {color: #c9d1d9;}
-.console-output .linel.warn {color: #f0ad4e}
+.console-output .line.warn {color: #f0ad4e}
 .console-output .line.error {color: #ff6b6b;}
 .console-output .line.info {color: #58a6ff;}
 
