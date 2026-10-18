@@ -102,11 +102,11 @@ btnAgregar.addEventListener("click", () => {
     li.innerHTML = `<span>${texto}</span>`;
 
     //Creacion del boton eliminar el <li>
-    btnEliminar = document.createElement("button");
+    const btnEliminar = document.createElement("button");
     btnEliminar.textContent = "Eliminar";
 
     //Evento para eliminar el <li>
-    btnEliminar.addEventListener("clicl", () => {
+    btnEliminar.addEventListener("click", () => {
         li.remove();
     });
 
@@ -173,7 +173,7 @@ $("#btnJQ").on("click", function () {
 });
 
 //Navegacion suave
-document.querySelectorAll('nav-main-nav a').forEach(enlace => {
+document.querySelectorAll('.main-nav a').forEach(enlace => {
     enlace.addEventListener("click", (e) => {
         e.preventDefault();
         const destino = document.querySelector(enlace.getAttribute("href"));
