@@ -133,7 +133,7 @@ const _table = console.table;
 
 function agregarLineaEspejo(tipo, mensaje) {
     //Se limpia el aviso inicial
-    if (consolaEspejo.querySelector('.line')?.textContent.includes('apareceran aqui')) {
+    if (consolaEspejo.querySelector('.line')?.textContent.includes('aparecerán aquí')) {
         consolaEspejo.innerHTML = '';
     }
     const linea = document.createElement("div");
