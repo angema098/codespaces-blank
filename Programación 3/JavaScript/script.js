@@ -84,13 +84,13 @@ inputNombre.addEventListener("input", (evento) =>{
     : `Hola, ${valor}! Tienes ${valor.length} caracteres.`;
 });
 
-//lista dinamimca 
+//lista dinámica 
 const inputTarea = document.getElementById("inputTarea");
 const btnAgregar = document.getElementById("btnAgregar");
 const listaTareas = document.getElementById("listaTareas");
 
 btnAgregar.addEventListener("click", () => {
-    const texto = inputRarea.value.trim();
+    const texto = inputTarea.value.trim();
 
     if(texto === ""){
         alert("Escribe una tarea primero");
