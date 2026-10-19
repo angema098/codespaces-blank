@@ -167,11 +167,16 @@ $("#btnJQ").on("click", function () {
     $("#cajaDemoJQ")
     .text("Modificacion con JQuery")
     .css({
-document.getElementById("btnResetJQ").addEventListener("click", () => {
-    cajaDemoJQ.textContent = "Haz click en un boton...";
         "background": " #eef2f7",
         "color": "#1e1e2e",
     });
+});
+
+//Reset JQuery
+document.getElementById("btnResetJQ").addEventListener("click", () => {
+    cajaDemoJQ.textContent = "Haz click en un boton...";
+    cajaDemoJQ.style.background = "#eef2f7";
+    cajaDemoJQ.style.color = "#1e1e2e";
 });
 
 //Navegacion suave
