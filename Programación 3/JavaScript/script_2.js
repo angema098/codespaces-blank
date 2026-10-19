@@ -167,6 +167,8 @@ $("#btnJQ").on("click", function () {
     $("#cajaDemoJQ")
     .text("Modificacion con JQuery")
     .css({
+document.getElementById("btnResetJQ").addEventListener("click", () => {
+    cajaDemoJQ.textContent = "Haz click en un boton...";
         "background": " #eef2f7",
         "color": "#1e1e2e",
     });
